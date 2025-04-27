@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Recipes website">
+  <meta name="keywords" content="food,drink,cooking,lifestyle">
+  <title>All Recipes | Home </title>
+  <link rel="icon" type="image/x-icon" href="image/cooking.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+    <a href="/index.html" class="flex items-center space-x-3">
+      <img src="image/cooking.png" alt="CSS Cooking Logo" class="h-6 w-6 object-contain">
+      <span class="text-xl font-bold text-black" style="font-family: 'Rubik', sans-serif;">CSS COOKING</span>
+    </a>
+
+    <div class="hidden md:flex items-center space-x-6">
+      <!-- Search Bar -->
+      <div>
+        <input id="search-input" type="text" placeholder="Search recipes..." 
+          class="border p-2 rounded w-48 focus:ring-blue-500 focus:border-blue-500" />
+      </div>
+
+      <!-- Navigation Links -->
+      <a href="index.html" class="font-bold hover:text-blue-600">Home</a>
+      <a href="admin.html" class="font-bold hover:text-blue-600">Admin</a>
+      
+    </div>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="menu" class="hidden md:hidden px-4 pb-4 space-y-4">
+    <!-- Search bar on mobile -->
+    <div class="flex justify-center">
+      <input id="mobile-search-input" type="text" placeholder="Search recipes..." 
+        class="border p-2 rounded w-full max-w-xs focus:ring-blue-600 focus:border-blue-600" />
+    </div>
+  
+    <!-- Links -->
+    <a href="index.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Home</a>
+    <a href="admin.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Admin</a>
+  </div>
+  
+</nav>
+
+
+<!-- Main Content -->
+ 
+<main class="max-w-6xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">All Recipes</h1>
+  
+    <!-- Dropdown Filters -->
+<div class="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+  <!-- Sort Dropdown -->
+  <div class="w-full md:w-1/3">
+    <label for="sort" class="block text-sm font-medium text-gray-700 mb-1">Sort by date:</label>
+    <select id="sort" class="border p-2 rounded w-full focus:ring-blue-600 focus:border-blue-600">
+      <option value="newest">Newest to Oldest</option>
+      <option value="oldest">Oldest to Newest</option>
+    </select>
+  </div>
+</div>
+
+
+
+  <!-- Recipe Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Nasi Goreng -->
+<a href="recipes/nasi-goreng.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Indonesian Nasi Goreng"
+data-author="Chef Rini"
+data-category="rice">
+<img src="/image/nasigoreng.jpg" alt="Nasi Goreng" class="w-full rounded-t">
+<div class="p-4">
+ <h2 class="text-lg font-semibold">Indonesian Nasi Goreng</h2>
+ <p class="text-sm text-gray-500">By Chef Rini • Apr 21, 2025</p>
+</div>
+</a>
+
+<!-- Doner Kebab -->
+<a href="recipes/doner-kebab.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Turkish Doner Kebab"
+data-author="Chef Ali"
+data-category="meat">
+<img src="/image/kebab.jpg" alt="Doner Kebab" class="w-full rounded-t">
+<div class="p-4">
+ <h2 class="text-lg font-semibold">Turkish Doner Kebab</h2>
+ <p class="text-sm text-gray-500">By Chef Ali • Apr 20, 2025</p>
+</div>
+</a>
+
+<!-- Kimchi -->
+<a href="recipes/kimchi.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Authentic Korean Kimchi"
+data-author="Chef Min"
+data-category="fermented">
+<img src="/image/kimchi.jpg" alt="Kimchi" class="w-full rounded-t">
+<div class="p-4">
+ <h2 class="text-lg font-semibold">Authentic Korean Kimchi</h2>
+ <p class="text-sm text-gray-500">By Chef Yumi • Apr 19, 2025</p>
+</div>
+</a>
+
+<!-- Juice -->
+<a href="recipes/juice.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Apple, Orange & Ginger Juice"
+data-author="Chef Elle"
+data-category="drink">
+<img src="/image/juice.jpg" alt="Juice" class="w-full rounded-t">
+<div class="p-4">
+ <h2 class="text-lg font-semibold">Apple, Orange & Ginger Juice</h2>
+ <p class="text-sm text-gray-500">By Chef Billa • Apr 18, 2025</p>
+</div>
+</a>
+
+<!-- Pasta -->
+<a href="recipes/pasta.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Delicious Pasta"
+data-author="Chef John"
+data-category="pasta">
+<img src="/image/pasta.jpg" alt="Delicious Pasta" class="w-full rounded-t">
+<div class="p-4">
+ <h2 class="text-lg font-semibold">Delicious Pasta</h2>
+ <p class="text-sm text-gray-500">By Chef Gino • Apr 17, 2025</p>
+</div>
+</a>
+
+
+<!-- Tacos -->
+<a href="recipes/tacos.html"
+class="recipe-card bg-white rounded shadow hover:shadow-lg transition"
+data-title="Authentic Mexican Tacos"
+data-author="Chef José"
+data-category="meat">
+  <img src="/image/tacos.jpg" alt="Authentic Tacos" class="w-full rounded-t">
+  <div class="p-4">
+    <h2 class="text-lg font-semibold">Authentic Mexican Tacos</h2>
+    <p class="text-sm text-gray-500">By Chef José • Apr 22, 2025</p>
+  </div>
+</a>
+
+
+
+    <!-- No results -->
+<p id="no-results" class="text-center text-gray-500 mt-12 hidden">No recipes found for your search and category.</p>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-100 text-center py-6 mt-12 text-gray-600 text-sm">
+    &copy; 2025 CSS COOKING. All rights reserved.
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Recipes website">
+  <meta name="keywords" content="food,drink,cooking,lifestyle">
+  <title>Admin </title>
+  <link rel="icon" type="image/x-icon" href="image/cooking.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+    <a href="/index.html" class="flex items-center space-x-3">
+      <img src="image/cooking.png" alt="CSS Cooking Logo" class="h-6 w-6 object-contain">
+      <span class="text-xl font-bold text-black" style="font-family: 'Rubik', sans-serif;">CSS COOKING</span>
+    </a>
+
+    <div class="hidden md:flex items-center space-x-6">
+      <!-- Search Bar -->
+      <div>
+        <input id="search-input" type="text" placeholder="Search recipes..." 
+          class="border p-2 rounded w-48 focus:ring-blue-500 focus:border-blue-500" />
+      </div>
+
+      <!-- Navigation Links -->
+      <a href="index.html" class="font-bold hover:text-blue-600">Home</a>
+<a href="admin.html" class="font-bold hover:text-blue-600">Admin</a>
+
+    </div>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="menu" class="hidden md:hidden px-4 pb-4 space-y-4">
+    <!-- Search bar on mobile -->
+    <div class="flex justify-center">
+      <input id="mobile-search-input" type="text" placeholder="Search recipes..." 
+        class="border p-2 rounded w-full max-w-xs focus:ring-blue-600 focus:border-blue-600" />
+    </div>
+  
+    <!-- Links -->
+    <a href="index.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Home</a>
+    <a href="admin.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Admin</a>
+  </div>
+  
+</nav>
+
+  <!-- Page Content -->
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-6">Admin Panel</h1>
+
+    <!-- Recipe List -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Existing Recipes</h2>
+      <ul class="space-y-4">
+        <li class="flex justify-between items-center bg-white p-4 rounded shadow">
+          <span>Indonesian Nasi Goreng</span>
+          <div class="space-x-2">
+            <button class="text-blue-600 hover:underline">Edit</button>
+            <button class="text-red-600 hover:underline">Delete</button>
+          </div>
+        </li>
+        <li class="flex justify-between items-center bg-white p-4 rounded shadow">
+          <span>Turkish Doner Kebab</span>
+          <div class="space-x-2">
+            <button class="text-blue-600 hover:underline">Edit</button>
+            <button class="text-red-600 hover:underline">Delete</button>
+          </div>
+        </li>
+        <li class="flex justify-between items-center bg-white p-4 rounded shadow">
+          <span>Authentic Korean Kimchi</span>
+          <div class="space-x-2">
+            <button class="text-blue-600 hover:underline">Edit</button>
+            <button class="text-red-600 hover:underline">Delete</button>
+          </div>
+        </li>
+        <li class="flex justify-between items-center bg-white p-4 rounded shadow">
+          <span>Apple, Orange & Ginger Juice</span>
+          <div class="space-x-2">
+            <button class="text-blue-600 hover:underline">Edit</button>
+            <button class="text-red-600 hover:underline">Delete</button>
+          </div>
+        </li>
+        <li class="flex justify-between items-center bg-white p-4 rounded shadow">
+          <span>Delicious Pasta</span>
+          <div class="space-x-2">
+            <button class="text-blue-600 hover:underline">Edit</button>
+            <button class="text-red-600 hover:underline">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Create New Recipe Form -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Create New Recipe</h2>
+      <form class="space-y-4" novalidate>
+        <input type="text" name="title" placeholder="Title" required minlength="3" class="w-full border p-2 rounded" />
+        <input type="file" name="image" accept="image/*" class="w-full border p-2 rounded" />
+        <input type="text" name="author" placeholder="Author" required minlength="3" class="w-full border p-2 rounded" />
+        <textarea name="description" placeholder="Brief Description" required minlength="5" class="w-full border p-2 rounded h-24"></textarea>
+        <textarea name="ingredients" placeholder="Ingredients List" required minlength="10" class="w-full border p-2 rounded h-32"></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+          Create Recipe
+        </button>
+      </form>
+    </section>
+  </main>
+
+<!-- Footer -->
+<footer class="bg-gray-100 text-center py-6 mt-12 text-gray-600 text-sm">
+  &copy; 2025 CSS COOKING. All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+

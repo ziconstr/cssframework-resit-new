@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Recipes website">
+  <meta name="keywords" content="food,drink,cooking,lifestyle">
+  <title>Pasta | Recipe </title>
+  <link rel="icon" type="image/x-icon" href="image/cooking.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+    <a href="/index.html" class="flex items-center space-x-3">
+      <img src="/image/cooking.png" alt="CSS Cooking Logo" class="h-6 w-6 object-contain">
+      <span class="text-xl font-bold text-black" style="font-family: 'Rubik', sans-serif;">CSS COOKING</span>
+    </a>
+
+    <div class="hidden md:flex items-center space-x-6">
+      <!-- Search Bar -->
+      <div>
+        <input id="search-input" type="text" placeholder="Search recipes..." 
+          class="border p-2 rounded w-48 focus:ring-blue-500 focus:border-blue-500" />
+      </div>
+
+      <!-- Navigation Links -->
+      <a href="index.html" class="font-bold hover:text-blue-600">Home</a>
+      <a href="admin.html" class="font-bold hover:text-blue-600">Admin</a>
+      
+    </div>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Mobile -->
+  <div id="menu" class="hidden md:hidden px-4 pb-4 space-y-4">
+    <!-- Search bar on mobile -->
+    <div class="flex justify-center">
+      <input id="mobile-search-input" type="text" placeholder="Search recipes..." 
+        class="border p-2 rounded w-full max-w-xs focus:ring-blue-600 focus:border-blue-600" />
+    </div>
+  
+    <!-- Links -->
+    <a href="/index.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Home</a>
+    <a href="admin.html" class="font-bold block text-gray-700 hover:text-blue-600 text-center">Admin</a>
+  </div>
+  
+</nav>
+
+  <!-- Page Content -->
+<main class="max-w-3xl mx-auto px-4 py-10">
+  <img src="/image/pasta.jpg" alt="Delicious Pasta" class="rounded shadow mb-6 w-full">
+  <h1 class="text-3xl font-bold mb-2">Delicious Pasta</h1>
+  <p class="text-sm text-gray-500 mb-4">By Chef John • Apr 17, 2025</p>
+  <p class="mb-6">
+    This classic pasta dish is full of rich tomato flavor, with a touch of garlic and herbs. It's a comforting and satisfying meal you can whip up in under 30 minutes.
+  </p>
+
+  <h2 class="text-xl font-semibold mb-2">Ingredients</h2>
+  <ul class="list-disc list-inside space-y-1 mb-6">
+    <li>200g spaghetti</li>
+    <li>2 tbsp olive oil</li>
+    <li>2 cloves garlic, minced</li>
+    <li>1 can diced tomatoes</li>
+    <li>1 tsp dried oregano</li>
+    <li>Salt and pepper to taste</li>
+    <li>Fresh basil (optional)</li>
+  </ul>
+
+  <a href="/index.html" class="inline-block mt-4 mb-8 bg-gray-200 hover:bg-gray-300 text-sm text-gray-800 px-4 py-2 rounded">
+    ← Back to Home
+  </a>
+
+  <form class="space-y-4" novalidate>
+    <h3 class="text-lg font-medium">Leave a Comment</h3>
+    <input type="text" name="name" placeholder="Your Name" required minlength="3" class="w-full border rounded px-4 py-2">
+    <textarea name="message" placeholder="Your Message" required minlength="5" class="w-full border rounded px-4 py-2"></textarea>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+  </form>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-100 text-center py-6 mt-12 text-gray-600 text-sm">
+  &copy; 2025 CSS COOKING. All rights reserved.
+</footer>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
+
